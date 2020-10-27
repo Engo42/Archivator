@@ -21,7 +21,7 @@ void pack(char* filename) {
 	fwrite(filename, namesize, 1, fileout);
 
 	fwrite(&filesize, 4, 1, fileout);
-	for (int i = namesize - 1; i >= 0; i--) {
+	for (int i = filesize - 1; i >= 0; i--) {
 		fwrite(&mem[i], 1, 1, fileout);
 	}
 }
